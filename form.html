@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Play with Paws</title>
+    <link rel="stylesheet" href="page1.css">
+    <link rel="stylesheet" href="adopt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body bgcolor="#e3d9e9">
+    <header>
+        <div class="rect1">
+            <div class="headname">
+                <h1>
+                    <i class="fa-solid fa-paw"></i>
+                    Play With Paws
+                    <i class="fa-solid fa-paw"></i>
+                </h1>
+            </div>
+            <div class="logo border">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="firstpage.html">Home</a></li>
+        <li><a href="initiative.html">Our Initiative</a></li>
+        <li>
+            <a href="#" class="dropdown-toggle">Support</a>
+            <ul class="dropdown">
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="nav-right">
+        <li></li>
+        <li></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    </nav>
+
+    <section>
+        <h2>Find Your Furry Friend!</h2>
+        <form name="submit-to-google-sheet" class="form">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" name="full_name" placeholder="Enter full name" required />
+            </div>
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter email address" required />
+            </div>
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="number" name="phone_number" placeholder="Enter phone number" required />
+            </div>
+            <div class="input-box">
+                <label>Tell us about your living situation (apartment, house, etc.)</label>
+                <textarea name="living_situation" placeholder="Describe your living environment"></textarea>
+            </div>
+            <div class="input-box">
+                <label>Do you have experience caring for pets?</label>
+                <div class="radio-group">
+                    <input type="radio" id="yes-exp" name="experience" value="yes">
+                    <label for="yes-exp">Yes</label>
+                    <input type="radio" id="no-exp" name="experience" value="no">
+                    <label for="no-exp">No</label>
+                </div>
+            </div>
+            <div class="input-box">
+                <label>What age group are you looking forward to adopting?</label>
+                <select name="age_group">
+                    <option hidden>Select a group</option>
+                    <option value="Puppy">Youngster (under 4 years)</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Other">Other (older than 8 years)</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label>What size are you looking forward to adopting?</label>
+                <select name="size">
+                    <option hidden>Select a group</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label>What gender are you looking forward to adopting?</label>
+                <select name="gender">
+                    <option hidden>Select a group</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Either">Either</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label>Is there a specific breed you're interested in?</label>
+                <input type="text" name="breed" placeholder="Enter breed (optional)" />
+            </div>
+            <div class="input-box address">
+                <label>Your Address</label>
+                <input type="text" name="street_address" placeholder="Enter street address" required />
+                <input type="text" name="city" placeholder="Enter city" required />
+                <input type="text" name="state" placeholder="Enter state" required />
+                <input type="text" name="zip_code" placeholder="Enter zip code" required />
+            </div>
+            <div class="input-box">
+                <input type="submit" value="Submit" class="submit-btn">
+            </div>
+        </form>
+        <div id="result"></div> <!-- Element to display result message -->
+    </section>
+
+    <script>
+        // Enter your Google Apps Script URL here
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbycXvLo-irMWWgSi1HsRrxMd3UFGHzToqF6c9RC2ahSKMDoomSVTdrL9xMRuR3oMPqY/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Prevent the default form submission
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+                    form.reset(); // Clear form data
+                    document.getElementById('result').innerText = "Form submitted successfully! Kindly wait a moment for your report.";
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    document.getElementById('result').innerText = "Form submission failed!";
+                });
+        });
+    </script>
+</body>
+</html>

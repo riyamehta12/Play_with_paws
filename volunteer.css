@@ -1,0 +1,46 @@
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+  }
+  
+  .submit-btn {
+    background-color: #513D51;
+    color: #e3d9e9;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e3d9e9;
+    color:#513D51;
+  }

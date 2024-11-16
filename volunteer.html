@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play with Paws</title>
+  <link rel="stylesheet" href="page1.css">
+  <link rel="stylesheet" href="volunteer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body bgcolor="#e3d9e9">
+    <header>
+        <div class="rect1">
+            <div class="headname">
+                <h1>
+                    <i class="fa-solid fa-paw"></i>
+                    Play With Paws
+                    <i class="fa-solid fa-paw"></i>
+                </h1>
+            </div>
+            <div class="logo border">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="firstpage.html">Home</a></li>
+        <li><a href="initiative.html">Our Initiative</a></li>
+        <li>
+            <a href="#" class="dropdown-toggle">Support</a>
+            <ul class="dropdown">
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="nav-right">
+        <li></li>
+        <li></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    </nav>
+    <section>
+        <h2>Volunteer Sign-Up</h2>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" required />
+            </div>
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email address" required />
+            </div>
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter phone number" required />
+            </div>
+            <div class="input-box">
+                <label>Tell us about your skills and interests</label>
+                <textarea placeholder="Describe your skills and interests"></textarea>
+            </div>
+            <div class="input-box">
+                <label>How did you hear about us?</label>
+                <select>
+                    <option hidden>Select an option</option>
+                    <option value="social_media">Social Media</option>
+                    <option value="friend">Friend</option>
+                    <option value="event">Event</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label>Which type of events are you interested in? (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fundraising" name="event_type" value="fundraising">
+                    <label for="fundraising">Fundraising</label>
+                    <input type="checkbox" id="adoption" name="event_type" value="adoption">
+                    <label for="adoption">Adoption</label>
+                    <input type="checkbox" id="education" name="event_type" value="education">
+                    <label for="education">Education</label>
+                    <input type="checkbox" id="other" name="event_type" value="other">
+                    <label for="other">
+                        Other
+                    </label>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="submit" value="Submit" class="submit-btn">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

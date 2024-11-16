@@ -1,0 +1,52 @@
+.contact-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f5f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+/* ... existing styles ... */
+
+button {
+    padding: 15px 30px; /* Increase padding for larger size */
+    font-size: 18px; /* Increase font size for better readability */
+    border: none; /* Remove default border for cleaner look */
+    cursor: pointer; /* Indicate clickable behavior */
+    background-color: #513D51; /* Match background color with existing theme */
+    color: #fff; /* White text for better contrast */
+    border-radius: 5px; /* Maintain rounded corners */
+  }
+  
+  button:hover {
+    background-color: #333; /* Darker background on hover for visual feedback */
+  }
+  
